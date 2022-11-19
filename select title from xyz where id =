@@ -1,0 +1,7 @@
+SET @start_time = ROUND(UNIX_TIMESTAMP(CURTIME(4)) * 1000);
+ 
+SELECT title FROM sakila.film where film_id=452;
+
+SET @end_time = ROUND(UNIX_TIMESTAMP(CURTIME(4)) * 1000);
+ 
+SELECT (@end_time - @start_time) AS time_taken;
