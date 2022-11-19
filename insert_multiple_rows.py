@@ -1,13 +1,9 @@
 import string
 import mysql.connector
 import json
-import requests
 import time
-import os
 import random
 
-
-import urllib.request
 
 mydb = mysql.connector.connect(
   host='localhost',
