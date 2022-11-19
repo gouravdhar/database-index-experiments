@@ -1,0 +1,9 @@
+SET @start_time = ROUND(UNIX_TIMESTAMP(CURTIME(4)) * 1000);
+ 
+SELECT release_year,COUNT(*)  FROM sakila.film 
+GROUP BY release_year;
+
+
+SET @end_time = ROUND(UNIX_TIMESTAMP(CURTIME(4)) * 1000);
+ 
+SELECT (@end_time - @start_time) AS time_taken;
