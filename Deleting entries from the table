@@ -7,3 +7,5 @@ delete from sakila.film
 where film_id in (65535,65534,65533,65532,65531,65530,65529,65528,65527,65526);
 
 SET @end_time = ROUND(UNIX_TIMESTAMP(CURTIME(4)) * 1000);
+ 
+SELECT (@end_time - @start_time) AS time_taken;
